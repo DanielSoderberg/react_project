@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Lager_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{opacity:0.89;fill:#6B017A;enable-background:new    ;}
+	.st2{opacity:0.81;fill:#111111;enable-background:new    ;}
+	.st3{opacity:0.89;fill:#1E604F;enable-background:new    ;}
+	.st4{clip-path:url(#SVGID_2_);}
+	.st5{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st6{font-family:'Calibri-Light';}
+	.st7{font-size:27px;}
+	.st8{letter-spacing:1;}
+	.st9{font-family:'Calibri-Bold';}
+	.st10{font-size:13.9027px;}
+</style>
+<g id="BACKGROUND">
+	<rect class="st0" width="500" height="500"/>
+</g>
+<g id="OBJECTS">
+	<g>
+		<g>
+			<path class="st0" d="M218.2,138.5c-0.2-8.1-6.4-17.1-16.7-21.8c6.5-4.1,10.9-9.1,10-13.8c-0.9-5.2-6.2-9.2-13.4-11.4
+				c3.1-1.9,4.5-4.4,4-7.6c-1-6.5-9.1-13.4-19.9-12.1s-19.7,8.1-18.8,14.6c0.3,2.3,1.4,4.3,3.1,5.9c-12.8,3.2-18.5,8.3-17.2,15.7
+				c0.7,4.2,3.6,8.6,7.9,11.8c-9.4,4.1-16.3,9.9-16.1,16.1c0.3,11.7,22.7,25,42.2,24.6C209.6,159.9,218.5,150.2,218.2,138.5z"/>
+			<g>
+				<path class="st1" d="M212.2,107c1.6,9.4-17.3,20-33,22.1c-15.6,2.1-27.6-7.6-29.2-17c-1.6-9.4,7.9-15,28.9-17.9
+					C194.5,92.1,210.6,97.6,212.2,107z"/>
+				<path class="st2" d="M166.1,87.8c-1-6.5,8-13.3,18.8-14.6s18.9,5.6,19.9,12.1c1,6.5-5.7,10.2-20.2,11.9
+					C173.8,98.6,167.1,94.4,166.1,87.8z"/>
+				<path class="st3" d="M141.2,135.8c-0.3-11.7,24.8-22,44.3-22.4c19.5-0.4,32.4,13.3,32.7,25c0.3,11.7-8.6,21.4-34.8,22
+					C163.9,160.8,141.5,147.6,141.2,135.8z"/>
+			</g>
+			<g>
+				<g>
+					<defs>
+						<path id="SVGID_1_" d="M141.2,135.8c-0.3-11.7,24.8-22,44.3-22.4c19.5-0.4,32.4,13.3,32.7,25c0.3,11.7-8.6,21.4-34.8,22
+							C163.9,160.8,141.5,147.6,141.2,135.8z"/>
+					</defs>
+					<clipPath id="SVGID_2_">
+						<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+					</clipPath>
+					<g class="st4">
+						<path class="st5" d="M127.3,139.8c0,0,26.9,22.2,88.3,10.3"/>
+						<path class="st5" d="M138.4,141.7c0,0,42,13.5,83-10.2"/>
+						<path class="st5" d="M133.8,116.7c0,0,19.4,33.6,92.9,11"/>
+					</g>
+				</g>
+			</g>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 225.895 124.7987)" class="st0 st6 st7 st8">DANIELS SPA</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 253.6499 142.3456)" class="st0 st9 st10">HEALTH CENTER</text>
+		</g>
+	</g>
+</g>
+<g id="DESIGNED_BY_FREEPIK">
+</g>
+</svg>
