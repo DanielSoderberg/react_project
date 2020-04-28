@@ -7,7 +7,7 @@ import Error from "../pages/Error";
 import Navbar from "./Navbar";
 import Treatments from "../pages/Treatments";
 import SingleTreatment from "../pages/SingleTreatment";
-
+import Login from "../pages/Login";
 import "../style/_main.scss";
 //import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -19,6 +19,7 @@ const Approuter = () => {
         <Route path="/" component={Home} exact></Route>
         <Route path="/Booking" component={Booking} exact></Route>
         <Route path="/Treatments" exact component={Treatments}></Route>
+        <Route path="/Login" exact component={Login}></Route>
         <Route
           path="/SingleTreatment"
           exact

@@ -13,7 +13,7 @@ const Home = () => {
       <Hero>
         <Bannerbox
           title="Relaxing treatments"
-          subtitle="Become a better person from only $1199"
+          subtitle="Become a better Person from only $50"
         >
           <Link to="/Treatments" className="btn-main">
             Our treatments

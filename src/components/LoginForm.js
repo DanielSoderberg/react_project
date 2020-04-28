@@ -1,27 +1,25 @@
 import React, { Component } from "react";
-import Hero from "./Hero";
-import Formular from "./Formular";
 import "../style/_main.scss";
-class Form extends Component {
+class LoginForm extends Component {
   constructor(props) {
     super(props);
 
     //initialisera state
     this.state = {
-      name: undefined,
-      appointmentTime: undefined,
-      mobile: undefined,
+      username: undefined,
+      email: undefined,
+      password: undefined,
     };
   }
 
-  handleOnChangeName(e) {
-    this.setState({ name: e.target.value });
+  handleOnChangeUsername(e) {
+    this.setState({ username: e.target.value });
   }
-  handleOnChangeTreatment(e) {
-    this.setState({ name: e.target.value });
+  handleOnChangeEmail(e) {
+    this.setState({ email: e.target.value });
   }
-  handleOnChangeTime(e) {
-    this.setState({ appointmentTime: e.target.value });
+  handleOnChangePassword(e) {
+    this.setState({ password: e.target.value });
   }
   handleOnChangeMobile(e) {
     this.setState({ mobile: e.target.value });
@@ -38,34 +36,33 @@ class Form extends Component {
   render() {
     return (
       <div>
-        <div>
-          <form className="bookingform" onSubmit={this.handleOnSubmit}>
+        <div className="bookingcontainer">
+          <form className="bookingformBig" onSubmit={this.handleOnSubmit}>
             <div>
-              <h3>Make your reservation</h3>
-              <p style={{ fontWeight: "600" }}>Choose one treatment today!</p>
+              <h3>Enter your logindetails</h3>
             </div>
-            <label style={{ fontWeight: "600" }}>Your name:</label>
+            <label>Username:</label>
             <input
-              className="form-control"
+              className="form-control big"
               type={"text"}
-              placeholder={"Your name"}
+              placeholder={"Enter your username"}
               onChange={this.handleOnChangeName}
             ></input>
-            <label style={{ fontWeight: "600" }}>Select Treatment:</label>
+            <label>Email:</label>
             <input
               className="form-control"
               type={"text"}
-              placeholder={"Type of Treatment"}
+              placeholder={"Enter your e-mailadress"}
               onChange={this.handleOnChangeTreatment}
             ></input>
-            <label style={{ fontWeight: "600" }}>Preferred time:</label>
+            <label>Password:</label>
             <input
               className="form-control"
               type={"text"}
-              placeholder={"Time of booking"}
+              placeholder={"Type your fucking password"}
               onChange={this.handleOnChangeTime}
             ></input>
-            <label style={{ fontWeight: "600" }}>Your number:</label>
+            <label>Your number:</label>
             <input
               className="form-control"
               type={"number"}
@@ -88,4 +85,4 @@ class Form extends Component {
     );
   }
 }
-export default Form;
+export default LoginForm;

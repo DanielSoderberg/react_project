@@ -11,6 +11,7 @@ class FormBig extends Component {
       name: undefined,
       appointmentTime: undefined,
       mobile: undefined,
+      message: undefined,
     };
   }
 
@@ -25,6 +26,9 @@ class FormBig extends Component {
   }
   handleOnChangeMobile(e) {
     this.setState({ mobile: e.target.value });
+  }
+  handleOnChangeMessage(e) {
+    this.setState({ message: e.target.value });
   }
 
   //skapa en metod
@@ -53,7 +57,7 @@ class FormBig extends Component {
             ></input>
             <label>Select Treatment:</label>
             <input
-              className="form-control"
+              className="form-control big"
               type={"text"}
               placeholder={"Type of Treatment"}
               onChange={this.handleOnChangeTreatment}
@@ -68,10 +72,19 @@ class FormBig extends Component {
             <label>Your number:</label>
             <input
               className="form-control"
-              type={"number"}
-              placeholder={"Your phone number"}
+              type={"numbers"}
+              placeholder={"Telephone number"}
               onChange={this.handleOnChangeMobile}
             ></input>
+            <label>Leave a message:</label>
+            <textarea
+              className="form-control"
+              type={"text"}
+              placeholder={"Leave a message"}
+              value={this.state.value}
+              onChange={this.handleOnChangeMessage}
+            ></textarea>
+            <texarea />
             <button
               className="btn-booking"
               type={"submit"}

@@ -424,151 +424,151 @@ h6 {
     text-align: center;
     font-weight: 700;
   }
+}
+.treatment-container {
+  display: flex;
+  width: 90%;
+  background-color: var(--lightGreen);
+}
+.treatment-container div {
+  padding: 2rem;
+}
+.treatment-container img {
+  padding: 5px;
+}
 
-  .treatment-container {
-    display: flex;
-    width: 90%;
-    background-color: var(--lightGreen);
+//FORMS & BOOKING
+.form-container {
+  background-color: rgba(52, 159, 163, 0.623);
+  color: white;
+  font-size: 0.8rem;
+  padding: 2rem;
+  width: 50%;
+  border-radius: 5px;
+  position: relative;
+  h1 {
+    padding: 15px;
+    color: var(--primaryGreen);
   }
-  .treatment-container div {
-    padding: 2rem;
-  }
-  .treatment-container img {
-    padding: 5px;
-  }
 
-  //FORMS & BOOKING
-  .form-container {
-    background-color: rgba(52, 159, 163, 0.623);
-    color: white;
-    font-size: 0.8rem;
-    padding: 2rem;
-    width: 50%;
-    border-radius: 5px;
-    position: relative;
-    h1 {
-      padding: 15px;
-      color: var(--primaryGreen);
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 5px;
-      color: #38c98c;
-    }
-
-    .form-group {
-      margin-top: 20px;
-      color: #38c98c;
-    }
-
-    label {
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    .input-group {
-      margin: 5px auto;
-      width: 100%;
-      color: #058a52;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-    }
-  }
-  .btn-booking {
-    display: inline-block;
-    text-decoration: none !important;
-    letter-spacing: var(--mainSpacing);
-    color: var(--mainWhite);
-    background: var(--primaryGreen);
-    padding: 0.4rem 0.9rem;
-    border: 2px solid var(--primaryGreen);
-    transition: var(--mainTransition);
-    text-transform: uppercase;
-    border-radius: 5px;
+  .form-control {
     width: 100%;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  .btn-booking:hover {
-    background: var(--darkGreen);
-    color: var(--mainWhite);
-  }
-
-  .bookingcontainer {
-    width: 90%;
-    padding: 2rem;
-    align-content: center;
-    margin: 4rem;
-  }
-  .bookingform {
-    display: inline-block;
-    min-width: 250px;
-    align-items: right;
-    position: absolute;
-    right: 4rem;
-    top: 8rem;
-  }
-  .bookingformBig {
-    display: inline-block;
-    padding: 2rem;
-    margin: auto;
-    min-width: 600px;
-    top: 8rem;
-    background-color: var(--lightGreen);
-  }
-
-  //FOOTER
-  .footercontainer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    color: var(--mainWhite);
-    height: 60px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 2fr 3fr 2fr;
-    background-color: var(--mainBlack);
-    font-size: 0.8rem;
-  }
-  .footericons {
-    color: var(--mainWhite);
-    font-size: 1.5rem;
-    letter-spacing: 80;
-    cursor: pointer;
-    margin-right: 15px;
-    display: flex;
-    justify-items: right;
-    padding: 10px;
-    color: rgb(7, 214, 204);
-  }
-
-  .logotype {
-    color: rgb(7, 214, 204);
-    font-size: 2.4rem;
-    font-family: "Dancing Script", cursive;
-  }
-  .footerlinks li {
-    font-size: 0.6rem;
-    line-height: 0.4rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
     padding: 5px;
+    color: #38c98c;
   }
-  .footerlinks li:hover {
-    cursor: pointer;
-    color: var(--darkGrey);
-    list-style: none;
+
+  .form-group {
+    margin-top: 20px;
+    color: #38c98c;
+  }
+
+  label {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .input-group {
+    margin: 5px auto;
+    width: 100%;
+    color: #058a52;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
   }
 }
+.btn-booking {
+  display: inline-block;
+  text-decoration: none !important;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainWhite);
+  background: var(--primaryGreen);
+  padding: 0.4rem 0.9rem;
+  border: 2px solid var(--primaryGreen);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn-booking:hover {
+  background: var(--darkGreen);
+  color: var(--mainWhite);
+}
+
+.bookingcontainer {
+  width: 90%;
+  padding: 2rem;
+  align-content: center;
+  margin: 4rem;
+}
+.bookingform {
+  display: inline-block;
+  min-width: 250px;
+  align-items: right;
+  position: absolute;
+  right: 4rem;
+  top: 8rem;
+}
+.bookingformBig {
+  display: inline-block;
+  padding: 2rem;
+  margin: auto;
+  min-width: 600px;
+  top: 8rem;
+  background-color: var(--lightGreen);
+}
+
+//FOOTER
+.footercontainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  color: var(--mainWhite);
+  height: 60px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  background-color: var(--mainBlack);
+  font-size: 0.8rem;
+}
+.footericons {
+  color: var(--mainWhite);
+  font-size: 1.5rem;
+  letter-spacing: 80;
+  cursor: pointer;
+  margin-right: 15px;
+  display: flex;
+  justify-items: right;
+  padding: 10px;
+  color: rgb(7, 214, 204);
+}
+
+.logotype {
+  color: rgb(7, 214, 204);
+  font-size: 2.4rem;
+  font-family: "Dancing Script", cursive;
+}
+.footerlinks li {
+  font-size: 0.6rem;
+  line-height: 0.4rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 5px;
+}
+.footerlinks li:hover {
+  cursor: pointer;
+  color: var(--darkGrey);
+  list-style: none;
+}
+
 @media screen and (max-width: 700px) {
   .footercontainer {
     width: 100%;

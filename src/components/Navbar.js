@@ -39,7 +39,10 @@ class Navbar extends Component {
               <Link to="/Treatments">Treatments</Link>
             </li>
             <li>
-              <Link to="/Booking">Booking</Link>
+              <Link to="/Booking">Your Bookings</Link>
+            </li>
+            <li>
+              <Link to="/Login">Login</Link>
             </li>
           </ul>
         </div>
