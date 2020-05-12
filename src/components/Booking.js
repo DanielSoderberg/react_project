@@ -1,8 +1,5 @@
 import React from "react";
-import Hero from "./Hero";
-import Footer from "./Footer";
 import candles from "../images/candles.jpg";
-import Card from "./Card";
 import "../style/_main.scss";
 
 const Booking = () => {

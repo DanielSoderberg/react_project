@@ -1,24 +1,26 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const CardMini = (props) => {
+const CardMini = (product) => {
   return (
-    <div className={"container"}>
-      <div className={"card"} style={{ width: "18rem", flex: 1 }}>
+    <div className={"container-treatments"}>
+      <div className={"card"} style={{ width: "18rem" }}>
         <img
-          src={props.image}
+          src={product.image}
           className={"card-img-top"}
-          alt={"Some random treatment"}
+          alt={"spa interiour"}
         />
         <div className={"card-body"}>
-          Special Treatment
-          <h5 className={"card-title"}></h5>
-          <p className={"card-text"}>Hot stone massage</p>
+          <h4 className={"card-title"} style={{ fontWeight: "800" }}>
+            {" "}
+            {product.title}
+          </h4>
+          <p className={"card-text"}>{product.description} </p>
+          <h5 style={{ fontWeight: "800", textAlign: "center" }}>
+            {product.price}{" "}
+          </h5>
+          <button className={"btn-booking"}>Book now!</button>
         </div>
-        <div className={"card-footer"}>
-          <small className="text-muted">120 minutes</small>
-        </div>
-        <button className={"btn-card"}>Book now</button>
       </div>
     </div>
   );

@@ -84,6 +84,25 @@ h6 {
   color: var(--mainWhite);
 }
 
+.btn-login {
+  display: inline-block;
+  text-decoration: none !important;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainWhite);
+  background: var(--mainBlack);
+  margin: auto;
+  margin-right: 2rem;
+  padding: 0.4rem 0.9rem;
+  border: 2px solid var(--mainBlack);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-login:hover {
+  background: transparent;
+  color: var(--mainBlack);
+}
+
 //Navbar
 .navbar {
   position: fixed;
@@ -193,6 +212,14 @@ h6 {
 .container-four {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 15px;
+  padding: 2rem;
+  top: 4rem;
+}
+.container-treatments {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
   grid-row-gap: 2rem;
   grid-column-gap: 15px;
   padding: 2rem;
@@ -481,6 +508,19 @@ h6 {
     resize: vertical;
   }
 }
+
+.form-admin {
+  margin: 5px auto;
+  width: 100%;
+  color: #203b30;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
 .btn-booking {
   display: inline-block;
   text-decoration: none !important;
@@ -505,7 +545,7 @@ h6 {
   width: 90%;
   padding: 2rem;
   align-content: center;
-  margin: 4rem;
+  margin: auto;
 }
 .bookingform {
   display: inline-block;
@@ -535,17 +575,27 @@ h6 {
   height: 60px;
   width: 100%;
   display: grid;
-  grid-template-columns: 2fr 3fr 2fr;
+  grid-column-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   background-color: var(--mainBlack);
-  font-size: 0.8rem;
 }
+
+.footercontainer ul li {
+  font-size: 0.8rem;
+  color: var(--primaryGreen);
+  display: flex;
+}
+.footerlinks {
+  display: flex;
+}
+
 .footericons {
   color: var(--mainWhite);
   font-size: 1.5rem;
   letter-spacing: 80;
   cursor: pointer;
   margin-right: 15px;
-  display: flex;
+
   justify-items: right;
   padding: 10px;
   color: rgb(7, 214, 204);
@@ -569,9 +619,19 @@ h6 {
   list-style: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   .footercontainer {
     width: 100%;
-    min-height: 80px;
+    min-height: 8rem;
+    padding: 2rem;
+  }
+  .footerlinks {
+    display: none;
+  }
+  .footericons {
+    display: inline-block;
+    padding: 2rem;
+    right: 3rem;
+    position: absolute;
   }
 }

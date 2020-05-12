@@ -7,7 +7,6 @@ import whitetowel from "../images/whitetowel.jpg";
 import candles from "../images/candles.jpg";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
-import SingleTreatment from "./SingleTreatment";
 import faker from "faker";
 import Form from "../components/Form";
 

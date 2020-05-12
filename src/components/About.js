@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Title from "./Title";
 import "../style/_main.scss";
-import Hero from "../components/Hero";
 import {
   FaSpa,
   FaHotTub,

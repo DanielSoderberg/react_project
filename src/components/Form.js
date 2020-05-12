@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Hero from "./Hero";
-import Formular from "./Formular";
 import "../style/_main.scss";
 class Form extends Component {
   constructor(props) {

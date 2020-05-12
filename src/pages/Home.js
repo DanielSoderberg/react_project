@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import About from "../components/About";
-import Card from "../components/Card";
 import "../style/_main.scss";
 import Hero from "../components/Hero";
 

@@ -13,7 +13,7 @@ const Card = (props) => {
         />
         <div className={"card-body"}>
           "Best thing ever!"
-          <h4 className={"card-title bold"}></h4>
+          <h3 className={"card-title"} style={{ fontWeight: "800" }}></h3>
           <p className={"card-text"}>
             "Im very happy that tried the special treatments in the spa. The
             best thing ive ever done! I highly recommend it."

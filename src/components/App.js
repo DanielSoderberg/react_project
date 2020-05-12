@@ -1,26 +1,46 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { Component } from "react";
 import Card from "./Card";
-import Form from "./Form";
-import Main from "./Main";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import "../style/_main.scss";
-//import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 
-const App = () => {
-  return (
-    <div>
-      <Browser>
-        <Navbar />
-        <Switch>
-          <Route path="/Bookings" component={Booking} exact />
-          <Route path="/Form" exact component={Formular} />
-          <Route path="/Card" exact component={Card} />
-        </Switch>
-      </Browser>
-    </div>
-  );
-};
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      products: [],
+    };
+  }
+  // componentDidUpdate(){
+  //         console.log("component did update")
+  // }
 
+  //component renderades/mounted
+  async componentDidMount() {
+    // async await
+    const res = await axios.get("http://localhost:1337/products");
+
+    console.log(res.data);
+    this.setState({ products: res.data });
+    /*  axios.get("http://localhost:1337/products").then( res=>{
+            console.log(res.data);
+            this.setState ( {products:res.data})
+      }) promise  */
+    //this.state.products
+  }
+
+  render() {
+    return (
+      <div>
+        {this.state.products.map((product) => (
+          <Card
+            key={product.id}
+            title={product.title}
+            price={product.price}
+            description={product.description}
+            image={"http://localhost:1337" + product.image.url}
+          />
+        ))}
+      </div>
+    );
+  }
+}
 export default App;

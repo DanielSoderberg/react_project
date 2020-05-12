@@ -1,7 +1,5 @@
 import React from "react";
 import Hero from "../components/Hero";
-import candles from "../images/candles.jpg";
-import Form from "../components/Form";
 import Title from "../components/Title";
 import afterspa from "../images/afterspa.jpg";
 import "../style/_main.scss";

@@ -12,7 +12,7 @@ const Footer = () => {
     <footer>
       <div className="footercontainer">
         <div>
-          <h3 className="logotype">DANIELS SPA</h3>
+          <h3 className="logotype">Daniels Spa</h3>
         </div>
         <div>
           <ul className="footerlinks">

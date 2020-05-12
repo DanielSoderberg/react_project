@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 import Title from "./Title";
 import "../style/_main.scss";
-import Hero from "../components/Hero";
-import spalights from "../images/spalights.jpg";
-import whitetowel from "../images/whitetowel.jpg";
-import whitecandles from "../images/whitecandles.jpg";
-import candles from "../images/candles.jpg";
-import facetreatment from "../images/facetreatment.jpg";
-import bathtub from "../images/bathtub.jpg";
 
 class Showpage extends Component {
   state = {
