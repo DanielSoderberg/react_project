@@ -3,12 +3,10 @@ import Card from "./Card";
 import axios from "axios";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      products: [],
-    };
-  }
+  state = {
+    products: [],
+  };
+
   // componentDidUpdate(){
   //         console.log("component did update")
   // }
@@ -31,12 +29,12 @@ class App extends Component {
     return (
       <div>
         {this.state.products.map((product) => (
-          <Card
+          <CardMini
             key={product.id}
+            docId={product.id}
             title={product.title}
             price={product.price}
             description={product.description}
-            image={"http://localhost:1337" + product.image.url}
           />
         ))}
       </div>

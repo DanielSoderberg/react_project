@@ -225,6 +225,29 @@ h6 {
   padding: 2rem;
   top: 4rem;
 }
+.img-container img {
+  width: 100%;
+}
+
+//Admin Lista produkter
+.productlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr, 1fr));
+  font-size: 1rem;
+}
+.productlist ul li {
+  list-style: none;
+  border: 1px solid #eee;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 5px;
+}
+.productlist ul li:hover {
+  font-weight: 900;
+  cursor: pointer;
+  background-color: rgb(192, 191, 191);
+}
+
 .booking-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -242,7 +265,7 @@ h6 {
   position: relative;
 }
 .booking-container {
-  display: flexbox;
+  display: flex;
 }
 
 /* Hero */
@@ -295,47 +318,42 @@ h6 {
     font-size: 3rem;
   }
 }
+
+/* About */
+.about {
+  background: var(--lightGreen);
+  padding: 3rem;
+}
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  padding: 1rem;
+  text-align: center;
+}
+.service-wrapper {
+  width: 90%;
+  margin: auto;
+}
+.service span {
+  display: inline-block;
+  color: var(--primaryGreen);
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+}
+.about h6 {
+  letter-spacing: var(--mainSpacing);
+}
+.about p {
+  width: 80%;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 992px) {
   .bannerbox {
     padding: 2rem 6rem;
   }
   .bannerbox h1 {
     font-size: 4rem;
-  }
-
-  /* About */
-  .about {
-    padding: 5rem 0;
-  }
-  .about {
-    background: var(--lightGreen);
-    text-align: center;
-  }
-  .services-center {
-    width: 90vw;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-    grid-row-gap: 2rem;
-    grid-column-gap: 30px;
-  }
-  .service span {
-    display: inline-block;
-    color: var(--primaryGreen);
-    font-size: 4.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .about h6 {
-    letter-spacing: var(--mainSpacing);
-  }
-  .about p {
-    width: 80%;
-    margin: 0 auto;
-  }
-  @media screen and (max-width: 992px) {
-    .about-center {
-      width: 95%;
-    }
   }
 
   /* Title */
@@ -392,7 +410,7 @@ h6 {
     font-weight: 400;
     letter-spacing: var(--mainSpacing);
   }
-  .treatments-link {
+  .treatment-link {
     position: absolute;
     top: 60%;
     left: 60%;
@@ -482,6 +500,7 @@ h6 {
     width: 100%;
     padding: 5px;
     color: #38c98c;
+    margin: 5px auto !important;
   }
 
   .form-group {
@@ -509,18 +528,35 @@ h6 {
   }
 }
 
+.biglogo {
+  position: absolute;
+  right: 3rem;
+  top: 5rem;
+  opacity: 0.4;
+  z-index: -2;
+  width: 50%;
+}
+
 .form-admin {
   margin: 5px auto;
   width: 100%;
-  color: #203b30;
+  color: #1e4949;
   padding: 12px;
   border: 1px solid #ccc;
+  background-color: var(--mainWhite);
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
 }
+.adminform-wrapper {
+  background-color: rgb(157, 250, 234);
+  padding: 3rem;
+  margin: auto;
+  border-radius: 5px;
+}
+
 .btn-booking {
   display: inline-block;
   text-decoration: none !important;
@@ -541,11 +577,89 @@ h6 {
   color: var(--mainWhite);
 }
 
+.btn-booking-black {
+  display: inline-block;
+  text-decoration: none !important;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainWhite);
+  background: black;
+  padding: 0.4rem 0.9rem;
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+.btn-booking-black:hover {
+  background: white;
+  border: 2px solid black;
+  color: black;
+}
+.form-header {
+  margin-top: 50px !important;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-edit {
+  color: var(--mainWhite);
+  background: rgb(94, 94, 94);
+  padding: 3px;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  margin: 0 10px;
+  width: 10%;
+  border-radius: 5px;
+  align-items: center;
+  float: right;
+}
+
+.btn-edit:hover {
+  background: rgb(55, 55, 56);
+  color: var(--mainWhite);
+}
+
+.btn-delete {
+  color: var(--mainWhite);
+  background: rgb(201, 15, 15);
+  padding: 3px;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  margin: 0 10px;
+  width: 10%;
+  border-radius: 5px;
+  align-items: center;
+
+  float: right;
+}
+
+.btn-delete:hover {
+  background: rgb(139, 3, 3);
+  color: var(--mainWhite);
+}
+
 .bookingcontainer {
   width: 90%;
   padding: 2rem;
   align-content: center;
   margin: auto;
+  margin-bottom: 7rem;
+}
+.booking-border {
+  min-width: 200px;
+  align-content: right;
+  padding: 5px;
+  right: 0px;
+}
+.logincontainer {
+  width: 60%;
+  padding: 2rem;
+  align-content: center;
+  margin: auto;
+  margin-bottom: 7rem;
 }
 .bookingform {
   display: inline-block;

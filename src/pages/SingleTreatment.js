@@ -20,10 +20,11 @@ class SingleTreatment extends Component {
         {this.state.products.map((product) => (
           <CardMini
             key={product.id}
-            image={"http://localhost:1337" + product.image.url}
+            docId={product.id}
             title={product.title}
-            description={product.description}
             price={product.price}
+            description={product.description}
+            image={"http://localhost:1337" + product.image.url}
           />
         ))}
       </div>

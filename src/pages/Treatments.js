@@ -21,12 +21,12 @@ const Treatments = () => {
         </Hero>
       </div>
 
-      <div>
-        <Title title="Our Treatments" />
-      </div>
-      <div className="services-center">
-        <div className="CardContainer">
-          <Link to="/SingleTreatment">
+      <div className="service-wrapper">
+        <div>
+          <Title title="Our Treatments" />
+        </div>
+        <div className="container-treatments">
+          <Link to="/SingleTreatment" style={{ textDecoration: "none" }}>
             <div className="img-container">
               <img src={whitetowel} alt="Different treatments" />
               <div className="price-top">
@@ -36,7 +36,7 @@ const Treatments = () => {
             </div>
             <div className="treatments-header">Sensational Spa</div>
           </Link>
-          <Link to="/SingleTreatment">
+          <Link to="/SingleTreatment" style={{ textDecoration: "none" }}>
             <div className="img-container">
               <img src={spalights} alt="Different treatments" />
               <div className="price-top">
@@ -47,7 +47,7 @@ const Treatments = () => {
             <div className="treatments-header">Relaxing weekend</div>
           </Link>
 
-          <Link to="/SingleTreatment">
+          <Link to="/SingleTreatment" style={{ textDecoration: "none" }}>
             <div className="img-container">
               <img src={candles} alt="Special treatment" />
               <div className="price-top">
@@ -59,7 +59,6 @@ const Treatments = () => {
           </Link>
         </div>
       </div>
-
       <div>
         <Title title="A word from our visitors" />
       </div>
@@ -68,7 +67,7 @@ const Treatments = () => {
         Here you will find a quiet and a total experience for body and mind.
         Here you can find a couple of comments from some of our erlier visitors.
       </div>
-      <div className="service-container"></div>
+
       <div className="container-four">
         <Card image={faker.image.avatar()} />
         <Card image={faker.image.avatar()} />

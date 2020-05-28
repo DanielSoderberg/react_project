@@ -1,21 +1,36 @@
-import React from "react";
-import candles from "../images/candles.jpg";
-import "../style/_main.scss";
+import React, { Component } from "react";
+import firebase from "./FirebaseConfig";
 
-const Booking = () => {
-  //State
-  return (
-    <div>
-      <div className="">
-        <img src={candles} style={{ width: "500px" }}></img>
-      </div>
+class Booking extends Component {
+  onClickFirebase() {
+    const docRef = firebase.firestore().collection("message").doc("info");
+    const docRef2 = firebase.firestore().collection("booking").doc("info2");
+    docRef.get().then((booking) => {
+      if (booking.exists) {
+        console.log("document data: ", booking.data());
+      } else {
+        console.log("error");
+      }
+    });
+
+    //SKRIV data till Firebase
+    docRef.set({
+      item: "Testet gubbe",
+      price: 2300,
+    });
+    docRef2.set({
+      item: "Test Ny",
+      price: 23300,
+    });
+  }
+  render() {
+    return (
       <div>
-        <h3>My bookings</h3>
-        <p>List and details of my bookings</p>
-        {localStorage.getItem("valueFromForm")}
+        <button onClick={this.onClickFirebase.bind(this)}>
+          Hämta Firestore Info
+        </button>
       </div>
-    </div>
-  );
-};
-
+    );
+  }
+}
 export default Booking;

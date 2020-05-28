@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import ProductList from "../ProductList";
 
 class Adminform extends Component {
   state = {
@@ -10,10 +11,11 @@ class Adminform extends Component {
     this.setState({ image: e.target.files[0] });
   }
 
+  //SPARA // HÄMTA data från Strapi
   async onSubmitToApi(e) {
     e.preventDefault();
 
-    //Hämta produktinfo, titel, pris mm i Strapi
+    //Skicka produktinfo, titel, pris mm till Strapi
     const res = await axios.post("http://localhost:1337/products", {
       title: e.target.elements.title.value,
       description: e.target.elements.description.value,
@@ -28,7 +30,7 @@ class Adminform extends Component {
     data.append("refId", res.data.id);
     data.append("field", "image");
 
-    //Hämta bilden
+    //Skicka bilden
     const resPic = await axios.post("http://localhost:1337/upload", data);
     console.log(resPic);
   }
@@ -36,36 +38,41 @@ class Adminform extends Component {
   render() {
     return (
       <div className="bookingcontainer">
-        <h3>Form for handling content</h3>
-        <form onSubmit={this.onSubmitToApi.bind(this)}>
-          <input
-            className="form-admin"
-            type="text"
-            name="title"
-            placeholder="title"
-          />
-          <input
-            className="form-admin"
-            type="text"
-            name="description"
-            placeholder="description"
-          />
-          <input
-            className="form-admin"
-            type="number"
-            name="price"
-            placeholder="price"
-          />
+        <div className="productlist">
+          <h3>List of our products and services</h3>
+          <ProductList />
+        </div>
+        <div className="adminform-wrapper">
+          <h3>Form for handling services</h3>
+          <form onSubmit={this.onSubmitToApi.bind(this)}>
+            <input
+              className="form-admin"
+              type="text"
+              name="title"
+              placeholder="title"
+            />
+            <input
+              className="form-admin"
+              type="text"
+              name="description"
+              placeholder="description"
+            />
+            <input
+              className="form-admin"
+              type="number"
+              name="price"
+              placeholder="price"
+            />
 
-          <input
-            className="form-admin"
-            type="file"
-            name="file"
-            onChange={this.eventChange.bind(this)}
-          />
-
-          <button className="btn-booking">Add product</button>
-        </form>
+            <input
+              className="form-admin"
+              type="file"
+              name="file"
+              onChange={this.eventChange.bind(this)}
+            />
+            <button className="btn-booking">Add product</button>
+          </form>
+        </div>
       </div>
     );
   }

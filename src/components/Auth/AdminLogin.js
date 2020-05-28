@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
-import AdminPage from "./AdminPage";
 
 class AdminLogin extends Component {
-  //via props
   state = {
     condition: true,
     user: "",
   };
+
   onClickRegister() {
     this.setState({ condition: false });
   }
@@ -28,8 +27,8 @@ class AdminLogin extends Component {
         console.log("User profile", response.data.user);
         console.log("User token", response.data.jwt);
         //uppdatera state med response , localhost
-        //this.props.userInfo(response.data.jwt)
-        this.props.userCredential(response.data.user, response.data.jwt);
+        //this.props.userInfo(response.data.jwt);
+        //this.props.userCredential(response.data.user, response.data.jwt);
       })
       .catch((error) => {
         // Handle error.
@@ -99,19 +98,19 @@ class AdminLogin extends Component {
                 className="form-control"
                 type="text"
                 name="username"
-                placeholder={"Username"}
+                placeholder="Username"
               />
               <input
                 className="form-control"
                 type="email"
                 name="email"
-                placeholder={"Email"}
+                placeholder="Email"
               />
               <input
                 className="form-control"
                 type="password"
                 name="password"
-                placeholder={"Password"}
+                placeholder="Password"
               />
 
               <button className="btn-booking">Register</button>

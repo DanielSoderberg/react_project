@@ -42,7 +42,15 @@ class Navbar extends Component {
               <Link to="/Booking">Your Bookings</Link>
             </li>
             <li>
-              <Link to="/AdminLogin">Login</Link>
+              <Link to="/UserLogin">Login</Link>
+            </li>
+            <li>
+              <Link to="/Contact">Contact</Link>
+            </li>
+            <li>
+              <Link style={{ color: "Gray" }} to="/AdminLogin">
+                Admin Login
+              </Link>
             </li>
             <li>
               <Link style={{ color: "Gray" }} to="/AdminPage">

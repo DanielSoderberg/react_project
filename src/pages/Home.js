@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import About from "../components/About";
 import "../style/_main.scss";
@@ -12,7 +12,7 @@ const Home = () => {
       <Hero>
         <Bannerbox
           title="Relaxing treatments"
-          subtitle="Become a better Person from only $50"
+          subtitle="Become a Better Person From Only $50"
         >
           <Link to="/Treatments" className="btn-main">
             Our treatments

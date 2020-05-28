@@ -2,15 +2,16 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 
+require("dotenv").config();
 const firebaseConfig = {
-  apiKey: "AIzaSyDQLm6hiRJ-NAEBZAdZPUJw7YrKqfDSql0",
-  authDomain: "fir-cloud-4a961.firebaseapp.com",
-  databaseURL: "https://fir-cloud-4a961.firebaseio.com",
-  projectId: "fir-cloud-4a961",
-  storageBucket: "fir-cloud-4a961.appspot.com",
-  messagingSenderId: "841389503194",
-  appId: "1:841389503194:web:8f6624511c9e72a3692be3",
-  measurementId: "G-6ZN0RWS7Y6",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASEURL,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
+  measurementId: process.env.REACT_APP_MEASUREMENTID,
 };
 
 firebase.initializeApp(firebaseConfig);

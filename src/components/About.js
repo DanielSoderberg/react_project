@@ -53,22 +53,23 @@ class About extends Component {
   };
   render() {
     return (
-      <div>
-        <section className="about">
+      <section className="about">
+        <div>
           <Title title="About us" />
-          <div className="services-center">
-            {this.state.services.map((item) => {
-              return (
-                <article key={`item-${item.title}`} className="service">
-                  <span>{item.icon}</span>
-                  <h6>{item.title}</h6>
-                  <p>{item.info}</p>
-                </article>
-              );
-            })}
-          </div>
-        </section>
-      </div>
+        </div>
+
+        <div className="about-container">
+          {this.state.services.map((item) => {
+            return (
+              <article key={`item-${item.title}`} className="service">
+                <span>{item.icon}</span>
+                <h6>{item.title}</h6>
+                <p>{item.info}</p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
     );
   }
 }
