@@ -1,20 +1,22 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import firebase from "../components/FirebaseConfig";
+import firebase from "./FirebaseConfig";
 
 class CardMini extends Component {
-  onClickSaveToFirestore() {
-    const docRef = firebase
-      .firestore()
-      .collection("booking")
-      .doc(this.props.docId.toString());
+onClickSaveToFirestore(){
+            
+   const docRef = firebase.firestore().collection("booking").doc(this.props.docId.toString());
+     
+    
+   docRef.set({
+       name: this.props.title,
+       description: this.props.description,
+       price: this.props.price
 
-    docRef.set({
-      name: this.props.title,
-      description: this.props.description,
-      price: this.props.price,
-    });
-  }
+   })
+
+
+   } 
 
   render() {
     return (
@@ -35,7 +37,7 @@ class CardMini extends Component {
               {this.props.price}{" "}
             </h5>
             <button
-              onClick={this.onClickSaveToFirestore.bind(this)}
+              onClick= {this.onClickSaveToFirestore.bind(this)}
               className={"btn-booking"}
             >
               Book now!

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import CardMini from "../components/CardMini";
 import axios from "axios";
+import firebase from "../components/FirebaseConfig";
+
 
 class SingleTreatment extends Component {
   state = {
@@ -13,6 +15,25 @@ class SingleTreatment extends Component {
     console.log(res.data);
     this.setState({ products: res.data });
   }
+
+onClickSaveToFirestore(){
+            
+   const docRef=  firebase.firestore().collection("booking").doc(this.props.docId.toString());
+     
+    
+   docRef.set({
+       name: this.props.title,
+       description: this.props.description,
+       price: this.props.price
+
+   })
+
+
+   } 
+
+
+
+
 
   render() {
     return (

@@ -103,6 +103,17 @@ h6 {
   color: var(--mainBlack);
 }
 
+.errorMessage{
+  color:red;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 5px;
+  border: width 1px solid red;
+  border-radius: 3px;
+  opacity:1;
+  transition:opacity 5000ms;
+}
+
 //Navbar
 .navbar {
   position: fixed;
@@ -227,6 +238,30 @@ h6 {
 }
 .img-container img {
   width: 100%;
+}
+
+//Productlist treatments
+.orderlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr, 1fr));
+  font-size: 0.8rem;
+  background-color: var(--lightGreen);
+}
+.orderlist li {
+  list-style: none;
+  border: 1px solid #eee;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 10px;
+}
+.orderlistheader {
+  font-weight: bold;
+  display: block;
+}
+.orderlistprice {
+  font-weight: bold;
+  display: block;
+  font-style: italic;
 }
 
 //Admin Lista produkter
@@ -649,9 +684,9 @@ h6 {
   margin-bottom: 7rem;
 }
 .booking-border {
-  min-width: 200px;
-  align-content: right;
-  padding: 5px;
+  max-width: 300px;
+  align-content: left;
+  padding: 10px;
   right: 0px;
 }
 .logincontainer {

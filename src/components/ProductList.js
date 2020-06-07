@@ -13,37 +13,45 @@ class ProductList extends Component {
     });
   }
   //DELETE
-  onClickDelete(e) {
-    e.preventDefault();
-    axios.delete("http://localhost:1337/products/:id");
-  }
+  onClickDelete(product) {
+    axios.delete("http://localhost:1337/products/delete/:id");
+     }
+  
+    
+  
 
   //UPDATE
   onClickEdit(e) {
     e.preventDefault();
-    axios.put("http://localhost:1337/products/:id");
+    axios.put("http://localhost:1337/products/update/:id").then((res) => {
+      console.log(res);
+      this.setState({ products: res.data });
+    });
   }
-
   render() {
     return (
       <div className="bookingcontainer">
         <ul>
           {this.state.products.map((product) => (
             <li key={product.id}>
-              {product.title} {}
+              {product.title}
               {product.price},{product.id},
               <button
                 className="btn-delete"
-                onClick={this.onClickDelete.bind(this)}
+                onClick={this.onClickDelete(this.product)}
               >
                 {" "}
                 x
               </button>
+
+
+
+
               <button
-                className="btn-update"
+                className="btn-edit"
                 onClick={this.onClickEdit.bind(this)}
               >
-                Edit product
+                Edit 
               </button>
             </li>
           ))}

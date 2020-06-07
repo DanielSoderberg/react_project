@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import firebase from "./FirebaseConfig";
+
 class FirebaseTest extends Component {
   onClickFirebase() {
-    const docRef = firebase.firestore().collection("booking").doc("info");
+    const db = firebase.firestore();
+    const docRef = db.collection("booking").doc("info");
+    //alt
     const docRef2 = firebase.firestore().collection("booking").doc("info2");
+    //läser data from firebase
     docRef.get().then((booking) => {
       if (booking.exists) {
         console.log("document data: ", booking.data());
@@ -12,6 +16,7 @@ class FirebaseTest extends Component {
       }
     });
 
+    // skriva data i firebase
     docRef.set({
       item: "Testet gubbe",
       price: 2300,
@@ -21,6 +26,7 @@ class FirebaseTest extends Component {
       price: 23300,
     });
   }
+
   render() {
     return (
       <div>

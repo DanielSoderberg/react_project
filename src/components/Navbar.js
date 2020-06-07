@@ -49,14 +49,10 @@ class Navbar extends Component {
             </li>
             <li>
               <Link style={{ color: "Gray" }} to="/AdminLogin">
-                Admin Login
+                Admin 
               </Link>
             </li>
-            <li>
-              <Link style={{ color: "Gray" }} to="/AdminPage">
-                Admin
-              </Link>
-            </li>
+    
           </ul>
         </div>
       </nav>

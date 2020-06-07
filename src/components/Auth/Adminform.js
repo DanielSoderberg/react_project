@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ProductList from "../ProductList";
+import AdminProfile from "./AdminProfile";
 
 class Adminform extends Component {
   state = {
-    image: " ",
+  image: " ",
+  
+
+    
   };
   eventChange(e) {
     console.log(e.target.files[0]);
@@ -35,9 +39,43 @@ class Adminform extends Component {
     console.log(resPic);
   }
 
+
+/*  //DELETE
+  async onClickDelete(e) {
+    e.preventDefault();
+    const res = await axios.delete("http://localhost:1337/products/:id", {res.data.id});
+  } */
+
+
+  onClickDelete = async (e) => {
+    e.preventDefault();
+    try {
+    const res = await axios.delete('http://localhost:1337/products/', {id: {id: 3 }})
+    console.log(res);
+    } catch (err) {
+        // Handle Error Here
+        console.error(err);
+    }
+}
+
+
+
+
+  //UPDATE
+  async onClickEdit(e) {
+    e.preventDefault();
+    const res = await axios.put("http://localhost:1337/products/put/:id");
+  }
+
+
+
+
   render() {
     return (
       <div className="bookingcontainer">
+      <h2>Welcome to the adminsection!</h2>
+      
+      <h6>Profile info: {this.props.userData}</h6>
         <div className="productlist">
           <h3>List of our products and services</h3>
           <ProductList />

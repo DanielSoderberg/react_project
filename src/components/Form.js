@@ -4,7 +4,7 @@ class Form extends Component {
   constructor(props) {
     super(props);
 
-    //initialisera state
+    //initiallera state
     this.state = {
       name: undefined,
       appointmentTime: undefined,
@@ -12,27 +12,43 @@ class Form extends Component {
     };
   }
 
-  handleOnChangeName(e) {
-    this.setState({ name: e.target.value });
-  }
-  handleOnChangeTreatment(e) {
-    this.setState({ name: e.target.value });
-  }
-  handleOnChangeTime(e) {
-    this.setState({ appointmentTime: e.target.value });
-  }
-  handleOnChangeMobile(e) {
-    this.setState({ mobile: e.target.value });
-  }
+  //spara state i localStorage
+  // this and arrow function
 
+  handleOnChange = (e) => {
+    // console.log(e.target.value)
+
+    this.setState({ [e.target.name]: e.target.value });
+
+    
+    // name properties värdena måste vara samma state
+  };
+
+   handleOnChangeName = (e) => {
+        this.setState({ name: e.target.value });
+ 
+    }
+
+    handleOnChangeTime = (e) => {
+        this.setState({ appointmentTime: e.target.value });
+    }
+
+
+    handleOnChangeMobile = (e) => {
+        this.setState({ mobile: e.target.value });
+    }
   //skapa en metod
   handleOnSubmit(e) {
     e.preventDefault();
-
-    //this.setState({})
+    this.setState({name:e.target.elements.Name.value,
+          appointmentTime: e.target.elements.Time.value
+ }); 
+ console.log(e.target.elements.Name.value);
+    this.setState({})
   }
   // uppdatera state med setState()
-  //Skicka data till annan sida med detaljer om bokning
+
+  //form kommer att anropa metoden med hjälp av event
   render() {
     return (
       <div>

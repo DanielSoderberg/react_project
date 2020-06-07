@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Logo from "../../images/logo2NY.png";
+import { Redirect } from "react-router-dom";
 
 class AdminLogin extends Component {
   state = {
     condition: true,
     user: "",
+    redirect: null,
+    errorMessage: "",
   };
+
 
   onClickRegister() {
     this.setState({ condition: false });
@@ -20,12 +25,15 @@ class AdminLogin extends Component {
       .post("http://localhost:1337/auth/local", {
         identifier: e.target.elements.email.value,
         password: e.target.elements.password.value,
+        
+
       })
       .then((response) => {
         // Handle success.
         console.log("Well done!");
         console.log("User profile", response.data.user);
         console.log("User token", response.data.jwt);
+        this.setState({ redirect: "/AdminForm" });
         //uppdatera state med response , localhost
         //this.props.userInfo(response.data.jwt);
         //this.props.userCredential(response.data.user, response.data.jwt);
@@ -33,8 +41,11 @@ class AdminLogin extends Component {
       .catch((error) => {
         // Handle error.
         console.log("Something went wrong:", error);
+        this.setState({ errorMessage: error.message });
       });
   }
+  
+  
 
   onSubmitRegister(e) {
     e.preventDefault();
@@ -51,23 +62,32 @@ class AdminLogin extends Component {
         console.log("User token", response.data.jwt);
         //localhost eller state med response data
         this.props.userCredential(response.data.user, response.data.jwt);
+
       })
       .catch((error) => {
         // Handle error.
-        console.log("An error occurred:", error);
+      console.log("Something went wrong with registration:", error);
+      this.setState({ errorMessage: error.message });
       });
   }
 
   render() {
+    //Redirect auth user - or something
+  if (this.state.redirect) {
+  return <Redirect to={this.state.redirect} />
+  }
     return (
       <div>
         {this.state.condition && (
           <div className="bookingcontainer">
+         
             <h3>Login</h3>
             <form
-              onSubmit={this.onSubmitLogin.bind(this)}
+                   onSubmit={this.onSubmitLogin.bind(this)}
               className="bookingformBig"
             >
+            {this.state.errorMessage &&
+          <h5 className="errorMessage">{this.state.errorMessage}</h5>}
               <label>Email</label>
               <input
                 className="form-control"
@@ -94,6 +114,8 @@ class AdminLogin extends Component {
               className="bookingformBig"
               onSubmit={this.onSubmitRegister.bind(this)}
             >
+            {this.state.errorMessage &&
+          <h5 className="errorMessage">{this.state.errorMessage}</h5>}
               <input
                 className="form-control"
                 type="text"
@@ -115,6 +137,9 @@ class AdminLogin extends Component {
 
               <button className="btn-booking">Register</button>
             </form>
+            <div>
+              <img className="biglogo" src={Logo} alt="Daniels SPA" />
+            </div>
           </div>
         )}
 
@@ -130,6 +155,7 @@ class AdminLogin extends Component {
             Register
           </button>
         </div>
+         
       </div>
     );
   }
